@@ -81,9 +81,9 @@ lista_de_valores = [
 def teste_somar_leitura_de_lista(numero_a, numero_b, resultado_esperado,):
         # 1 - Configura
         # utilizamos a lista como massa de teste
+        # massa de dodos para a função somar
 
         # 2 - Executa
-
         resultado_obtido = somar(numero_a, numero_b)
 
         # 3 - Valida
