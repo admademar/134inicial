@@ -72,9 +72,13 @@ def teste_dividir_negativo():
 # lista para uso como massa de teste
 lista_de_valores = [
     (8, 7, 15),
+
     (20, 30, 50),
+
     (25, 0, 25),
+
     (-5, 12, 7),
+
     (6, -3, 3)
 ]
 @pytest.mark.parametrize('numero_a, numero_b, resultado_esperado', lista_de_valores)
