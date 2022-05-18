@@ -49,6 +49,7 @@ def teste_subtrair():
 @pytest.mark.parametrize('numero_a, numero_b, resultado_esperado', ler_csv('C:\\Users\\ademarfr\\PycharmProjects\\pythonProject\\134inicial\\vendors\\csv\\massa_teste_subtrair_positivo.csv'))
 def teste_subtrair_leitura_csv(numero_a, numero_b, resultado_esperado):
         # 1 - Configura
+        # Fazendo a Leitura do Arquivo.csv usando a massa de teste(dados)
 
         # 2 - Executa
         resultado_obtido = subtrair(int(numero_a), int(numero_b))
@@ -68,6 +69,17 @@ def teste_multiplicar():
 
     # 3 - Valida
     assert resultado_esperado == resultado_obtido
+@pytest.mark.parametrize('numero_a, numero_b, resultado_esperado', ler_csv('C:\\Users\\ademarfr\\PycharmProjects\\pythonProject\\134inicial\\vendors\\csv\\massa_teste_multipicar_positivo.csv'))
+def teste_multiplicar_leitura_csv(numero_a, numero_b, resultado_esperado):
+        # 1 - Configurar
+        # Fazendo a Leitura do Arquivo.csv usando a massa de teste(dados)
+
+
+        # 2 - Executa
+        resultado_obtido = multiplicar(int (numero_a), int(numero_b))
+
+        # 3 - Valida
+        assert resultado_obtido == int (resultado_esperado)
 
 
 def teste_dividir_positivo():
@@ -84,6 +96,22 @@ def teste_dividir_positivo():
 
     # 3 - Validar
     assert resultado_obtido == resultado_esperado
+@pytest.mark.parametrize('numero_a,numero_b,resultado_esperado',ler_csv('C:\\Users\\ademarfr\\PycharmProjects\\pythonProject\\134inicial\\vendors\\csv\\massa_teste_dividir_positivo_positivo.csv'))
+def teste_dividir_positivo_leitura_csv(numero_a, numero_b, resultado_esperado):
+
+
+    # 1 - Configurar/Preparar
+
+    # 1.2 - Resultado Esperado
+
+    # 2 - Executar
+    resultado_obtido = dividir(int (numero_a), int (numero_b))
+
+    # Validar
+    assert resultado_obtido == int (resultado_esperado)
+
+
+
 
 
 def teste_dividir_negativo():
@@ -127,8 +155,8 @@ def teste_somar_leitura_de_lista(numero_a, numero_b, resultado_esperado, ):
 @pytest.mark.parametrize('numero_a, numero_b, resultado_esperado',ler_csv('C:\\Users\\ademarfr\\PycharmProjects\\pythonProject\\134inicial\\vendors\\csv\\massa_teste_somar_positivo.csv'))
 def teste_somar_leitura_de_csv(numero_a, numero_b, resultado_esperado,):
     # 1 - Configura
-    # utilizamos a lista como massa de teste
-    # massa de dodos para a função somar
+    # Fazendo a Leitura do Arquivo.csv usando a massa de teste(dados)
+    # massa de dados para a função somar
 
     # 2 - Executa
     resultado_obtido = somar(int(numero_a), int(numero_b))

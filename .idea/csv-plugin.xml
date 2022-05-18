@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\vendors\csv\massa_teste_dividir_positivo_positivo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\vendors\csv\massa_teste_multipicar_positivo.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\vendors\csv\massa_teste_somar_positivo.csv">
           <value>
             <Attribute>
