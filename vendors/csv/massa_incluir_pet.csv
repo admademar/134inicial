@@ -3,3 +3,5 @@ pet_id,category_id,category_name,pet_name,tags_id,tags_name,status
 919122,2,gato,gatomiau,2,castrado,available
 919123,3,peixe,Nemo,3,registrado,available
 919124,2,gato,Bichano,1,vacinado,available
+919125,4,Cobra,Python,2,venenada,available
+919126,1,Vaca,Bovino,3,vacinada,vendida
