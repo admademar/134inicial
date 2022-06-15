@@ -8,9 +8,9 @@ class TestCompradepassagem:
         '\\134inicial\\venv\\WebDriverManager\\chrome\\102.0.5005.61\\chromedriver_win32\\chromedriver.exe'
         )
         self.vars = {}
-    #
-    # def teardown_method(self):
-    #     # self.driver.quit()
+
+    def teardown_method(self):
+         self.driver.quit()
 
     def test_compra_de_passagem(self):
         self.driver.get("https://www.blazedemo.com/")

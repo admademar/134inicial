@@ -5,6 +5,8 @@
 import json
 
 import requests
+import username as username
+
 url = 'https://petstore.swagger.io/v2/user'
 
 headers = {'Content-Type': 'application/json'}
@@ -72,13 +74,55 @@ def test_login():
     assert mensagen_esperado.find(corpo_do_resultado_obtido['message'])
 
 
-    # - Extari
+    # - Extrai
 
     mensagen_extraida = corpo_do_resultado_obtido.get('message')
     print(f'A messagen = {mensagen_extraida}')
     token = mensagen_extraida[23:]  #[inicio:fim]
     print(f' O Token = {token}')
 
+
+def test_consultar_usuario():
+
+    # Configurar
+
+    # Dados de Entrada(usaername)
+
+    username = "Herry"
+
+    # - Resultado Esperados
+
+    status_code_esperado = 200
+    id_esperado = 44441
+    username_esperado = "Herry"
+    firstName_esperado = "Bruxo"
+    lastName_esperado = "Potter"
+    email_esperado = "herry@bruxopoter.com"
+    password_esperado = "dunha"
+    phone_esperado = 11999944441
+    userStatus_esperado = 0
+
+    # Executar
+
+    resultado_obtido = requests.get(
+            url=url + '/' + username,
+            headers=headers,
+    )
+
+    # Valida
+    print(resultado_obtido)
+    corpo_do_resultado_obtido = resultado_obtido.json()
+    print(json.dumps(corpo_do_resultado_obtido, indent=4))
+
+    assert resultado_obtido.status_code == status_code_esperado
+    assert corpo_do_resultado_obtido['id'] == id_esperado
+    assert corpo_do_resultado_obtido['username'] == username_esperado
+    assert corpo_do_resultado_obtido['firstName'] == firstName_esperado
+    assert corpo_do_resultado_obtido['lastName'] == lastName_esperado
+    assert corpo_do_resultado_obtido['email'] == email_esperado
+    assert corpo_do_resultado_obtido['password'] == password_esperado
+    assert corpo_do_resultado_obtido['phone'] == str(phone_esperado)
+    assert corpo_do_resultado_obtido['userStatus'] == userStatus_esperado
 
 
 
